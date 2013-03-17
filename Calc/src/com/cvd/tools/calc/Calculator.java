@@ -33,23 +33,26 @@ public class Calculator {
 	private float result;
 
 	private void plus() {
-		result = firstInputValue = firstInputValue + secondInputValue;
-		currentSign = Sign.NONE;
+		result = firstInputValue + secondInputValue;
 	}
 
 	private void minus() {
-		result = firstInputValue = firstInputValue - secondInputValue;
-		currentSign = Sign.NONE;
+		result = firstInputValue - secondInputValue;
 	}
 
 	private void divide() {
-		result = firstInputValue = firstInputValue / secondInputValue;
-		currentSign = Sign.NONE;
+		result = firstInputValue / secondInputValue;
 	}
 
 	private void multiply() {
-		result = firstInputValue = firstInputValue * secondInputValue;
-		currentSign = Sign.NONE;
+		result = firstInputValue * secondInputValue;
+	}
+	
+	public void applyResultAsInput() {
+		if (first) {
+			setInputValue(result);
+			currentSign = Sign.NONE;
+		}
 	}
 
 	public boolean equals() {

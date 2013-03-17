@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		display.setCursorVisible(false);
+		history.setCursorVisible(false);
 		return true;
 	}
 
@@ -156,6 +157,7 @@ public class MainActivity extends Activity {
 			calc.setInputValue(value);
 			checkForResult();
 			calc.setCurrentSign(Sign.NONE);
+			calc.applyResultAsInput();
 		} catch (NumberFormatException e) {
 		}
 	}
@@ -205,5 +207,6 @@ public class MainActivity extends Activity {
 	public void inErase(View view) {
 		calc.erase();
 		display.setText("");
+		history.setText("");
 	}
 }

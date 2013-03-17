@@ -19,27 +19,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.01" >
-
-            <EditText
-                android:id="@+id/history"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.01"
-                android:ems="10"
-                android:inputType="number|numberSigned|numberDecimal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <EditText
-                android:id="@+id/display"
-                android:layout_width="fill_parent"
+                android:id="@+id/history"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.01"
                 android:ems="10"
                 android:inputType="number|numberSigned|numberDecimal" >
 
@@ -49,14 +34,35 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal" />
+
+            <Button
+                android:id="@+id/erase"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="inErase"
+                android:text="Reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
             android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/seven"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inSeven"
                 android:text="7" />
 
@@ -64,7 +70,8 @@
                 android:id="@+id/eight"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inEight"
                 android:text="8" />
 
@@ -72,7 +79,8 @@
                 android:id="@+id/nine"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inNine"
                 android:text="9" />
 
@@ -80,29 +88,24 @@
                 android:id="@+id/plus"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inPlus"
                 android:text="+" />
 
-            <Button
-                android:id="@+id/mult"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="inMultiply"
-                android:text="*" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="72dp"
             android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/four"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inFour"
                 android:text="4" />
 
@@ -110,7 +113,8 @@
                 android:id="@+id/five"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inFive"
                 android:text="5" />
 
@@ -118,7 +122,8 @@
                 android:id="@+id/six"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inSix"
                 android:text="6" />
 
@@ -126,29 +131,24 @@
                 android:id="@+id/minus"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inMinus"
                 android:text="-" />
 
-            <Button
-                android:id="@+id/div"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="inDivide"
-                android:text="/" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="72dp"
             android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/one"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inOne"
                 android:text="1" />
 
@@ -156,7 +156,8 @@
                 android:id="@+id/two"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inTwo"
                 android:text="2" />
 
@@ -164,28 +165,32 @@
                 android:id="@+id/three"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inThree"
                 android:text="3" />
 
             <Button
-                android:id="@+id/erase"
+                android:id="@+id/mult"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:onClick="inErase"
-                android:text="Erase" />
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:onClick="inMultiply"
+                android:text="*" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="72dp" >
 
             <Button
                 android:id="@+id/button2"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inComma"
                 android:text="," />
 
@@ -193,19 +198,42 @@
                 android:id="@+id/button1"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
                 android:onClick="inZero"
                 android:text="0" />
 
             <Button
+                android:id="@+id/button3"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:text="Del" />
+
+            <Button
+                android:id="@+id/div"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:onClick="inDivide"
+                android:text="/" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <Button
                 android:id="@+id/equals"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="147dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="inEquals"
                 android:text="=" />
         </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>
